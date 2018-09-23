@@ -72,7 +72,7 @@ public class ArticleDetailFragment extends Fragment implements
 
     //Progress spinner - show while loading
     //private ProgressBar loadingSpinner;
-   // private View progressSpinnerOverlay;
+    private View progressSpinnerOverlay;
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -92,8 +92,8 @@ public class ArticleDetailFragment extends Fragment implements
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //loading spinner
-        //progressSpinnerOverlay = (View)getView().findViewById(R.id.progress_spinner_overlay);
-       // Utils.animateView(progressSpinnerOverlay, View.VISIBLE, 0.4f, 200);
+        progressSpinnerOverlay = view.findViewById(R.id.progress_spinner_overlay);
+       Utils.animateView(progressSpinnerOverlay, View.VISIBLE, 0.4f, 200);
 
     }
 
