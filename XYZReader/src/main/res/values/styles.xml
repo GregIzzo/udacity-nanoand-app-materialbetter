@@ -17,7 +17,7 @@
 
 <resources>
 
-    <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
         <!-- your app branding color for the app bar -->
         <item name="colorPrimary">@color/primary</item>

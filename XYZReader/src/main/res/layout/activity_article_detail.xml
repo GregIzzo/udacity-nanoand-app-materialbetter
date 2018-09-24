@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Theme.Bacon"
-    android:background="@android:color/holo_red_dark"
+    style="@style/Theme.Bacon.Detail"
+
     >
 
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/up_container"
-        android:background="@android:color/transparent"
+
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="@dimen/app_bar_elev"
@@ -38,7 +38,7 @@
 
                 android:contentDescription="@string/up"
                 android:src="@drawable/ic_arrow_back"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
                 app:contentInsetStart="72dp"
                 app:layout_collapseMode="pin" />
 
@@ -51,5 +51,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <FrameLayout
+        android:id="@+id/progress_spinner_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/black"
+        android:visibility="visible">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"/>
+    </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>

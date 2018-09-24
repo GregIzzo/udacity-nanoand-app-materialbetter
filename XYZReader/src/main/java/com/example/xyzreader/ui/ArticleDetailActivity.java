@@ -12,6 +12,7 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 //import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -104,6 +105,8 @@ public class ArticleDetailActivity extends AppCompatActivity
                 }
             });
         }
+        progressSpinnerOverlay = findViewById(R.id.progress_spinner_overlay);
+      //  Utils.animateView(progressSpinnerOverlay, View.VISIBLE, 0.4f, 200);
 
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
@@ -137,7 +140,8 @@ public class ArticleDetailActivity extends AppCompatActivity
             }
             mStartId = 0;
         }
-        //Utils.animateView(progressSpinnerOverlay, View.GONE, 0, 200);
+        Log.d("GGG", "onLoadFinished: ==== removing spinner");
+        Utils.animateView(progressSpinnerOverlay, View.GONE, 0, 200);
     }
 
     @Override

@@ -92,8 +92,8 @@ public class ArticleDetailFragment extends Fragment implements
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //loading spinner
-        progressSpinnerOverlay = view.findViewById(R.id.progress_spinner_overlay);
-       Utils.animateView(progressSpinnerOverlay, View.VISIBLE, 0.4f, 200);
+       // progressSpinnerOverlay = view.findViewById(R.id.progress_spinner_overlay);
+       //Utils.animateView(progressSpinnerOverlay, View.VISIBLE, 0.4f, 200);
 
     }
 
