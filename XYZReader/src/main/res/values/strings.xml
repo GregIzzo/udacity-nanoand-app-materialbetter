@@ -9,5 +9,6 @@
 
     <string name="up">Up</string>
     <string name="dc_detail_image">Story Image</string>
+    <string name="detail_fragment_sample_text">Some sample text</string>
 
 </resources>
