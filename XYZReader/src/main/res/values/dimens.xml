@@ -17,4 +17,6 @@
 
     <dimen name="app_bar_elev">4dp</dimen>
 
+    <dimen name="main_tool_bar_height">116dp</dimen>
+
 </resources>

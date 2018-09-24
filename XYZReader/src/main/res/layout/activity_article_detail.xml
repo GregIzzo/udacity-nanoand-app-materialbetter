@@ -4,17 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/Theme.Bacon.Detail"
-
     >
-
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/up_container"
-
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="@dimen/app_bar_elev"
-
         >
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -27,7 +23,6 @@
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
             android:background="@android:color/holo_green_dark"
-
             >
 
             <ImageButton

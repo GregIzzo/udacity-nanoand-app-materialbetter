@@ -34,13 +34,13 @@ public class ArticleDetailActivity extends AppCompatActivity
     private long mStartId;
 
     private long mSelectedItemId;
-    private int mSelectedItemUpButtonFloor = Integer.MAX_VALUE;
+   private int mSelectedItemUpButtonFloor = Integer.MAX_VALUE;
     private int mTopInset;
 
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
-    private View mUpButtonContainer;
-    private View mUpButton;
+       private View mUpButtonContainer;
+   private View mUpButton;
 
     //Progress spinner - show while loading
     private ProgressBar loadingSpinner;
@@ -68,9 +68,11 @@ public class ArticleDetailActivity extends AppCompatActivity
             @Override
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
+
                 mUpButton.animate()
                         .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
                         .setDuration(300);
+
             }
 
             @Override
@@ -79,7 +81,9 @@ public class ArticleDetailActivity extends AppCompatActivity
                     mCursor.moveToPosition(position);
                 }
                 mSelectedItemId = mCursor.getLong(ArticleLoader.Query._ID);
+
                 updateUpButtonPosition();
+
             }
         });
 
@@ -99,12 +103,15 @@ public class ArticleDetailActivity extends AppCompatActivity
                 public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
                     view.onApplyWindowInsets(windowInsets);
                     mTopInset = windowInsets.getSystemWindowInsetTop();
+
                     mUpButtonContainer.setTranslationY(mTopInset);
                     updateUpButtonPosition();
+
                     return windowInsets;
                 }
             });
         }
+
         progressSpinnerOverlay = findViewById(R.id.progress_spinner_overlay);
       //  Utils.animateView(progressSpinnerOverlay, View.VISIBLE, 0.4f, 200);
 
@@ -171,10 +178,12 @@ public class ArticleDetailActivity extends AppCompatActivity
         public void setPrimaryItem(ViewGroup container, int position, Object object) {
             super.setPrimaryItem(container, position, object);
             ArticleDetailFragment fragment = (ArticleDetailFragment) object;
+
             if (fragment != null) {
                 mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
                 updateUpButtonPosition();
             }
+
         }
 
         @Override
