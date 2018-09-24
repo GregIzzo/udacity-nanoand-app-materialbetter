@@ -22,19 +22,19 @@
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
-            android:background="@android:color/holo_green_dark"
+
             >
 
             <ImageButton
                 android:id="@+id/action_up"
-                android:layout_width="match_parent"
+                android:layout_width="?actionBarSize"
                 android:layout_height="?actionBarSize"
                 android:background="@color/primary"
 
                 android:contentDescription="@string/up"
                 android:src="@drawable/ic_arrow_back"
 
-                app:contentInsetStart="72dp"
+                app:contentInsetStart="?actionBarSize"
                 app:layout_collapseMode="pin" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
